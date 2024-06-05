@@ -3,9 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>弹性盒</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        .big{
+            width: 1200px;
+            height: 400px;
+            background: yellow;
+            /* 设置弹性盒 */
+            display: flex;
+
+        }
+        span{
+            /* 给子元素项目设置 flex:1; */
+            flex:1;
+            border: 1px solid #000;
+            background: palegreen;
+            width: 100px;
+            height: 100px;
+
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="big">
+        <span>星期三</span>
+        <span>星期四</span>
+        <span>星期五</span>
+        <span>星期一</span>
+        <span>星期二</span>
+        <span>星期三</span>
+        <span>星期四</span>
+        <span>星期五</span>
+    </div>
 </body>
 </html>
