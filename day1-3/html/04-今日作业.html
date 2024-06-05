@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>焦点新闻</title>
+    <style>
+        /* 去除元素自带缝隙 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* #new 最大的一整块 设置宽高 背景色 有宽度的div 水平居中浏览器 设置弹性盒让子元素dl 横向排列 两端环绕对齐*/
+        #new {
+            width: 1200px;
+            height: 270px;
+            /* background: salmon; */
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+        }
+
+
+        /* 选择dl,宽度270 设置背景色为了看清楚,使用后删除 
+        因为dl */
+        dl {
+            width: 270px;
+            height: 270px;
+            /* background: blue; */
+            /* border: 1px solid #000; */
+        }
+
+        
+        dt{
+            line-height: 26px;
+            font-size: 14px;
+            color: #720808;
+            margin-top: 14px;
+
+        }
+        dd{
+            font-size: 12px;
+            color: #333333;
+            float: right;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 焦点新闻 -->
+    <div id="new">
+        <dl>
+            <img src="../images/1.png" alt="">
+            <dt>江凤艳一行赴长发村召开包保帮扶工作现场会</dt>
+            <dd>2024-04-28</dd>
+        </dl>
+        <dl>
+            <img src="../images/1.png" alt="">
+            <dt>江凤艳一行赴长发村召开包保帮扶工作现场会</dt>
+            <dd>2024-04-28</dd>
+        </dl>
+        <dl>
+            <img src="../images/1.png" alt="">
+            <dt>江凤艳一行赴长发村召开包保帮扶工作现场会</dt>
+            <dd>2024-04-28</dd>
+        </dl>
+        <dl>
+            <img src="../images/1.png" alt="">
+            <dt>江凤艳一行赴长发村召开包保帮扶工作现场会</dt>
+            <dd>2024-04-28</dd>
+        </dl>
+    </div>
+</body>
+
+</html>
