@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        css语法 你要修饰的元素{
+            属性:属性值;
+            属性:属性值;
+            属性:属性值;
+        }
+    </style> -->
+    <style>
+        /* !important的权重为1000，一般不用，会使所有元素的变 */
+        /* 元素选择器 权重为1*/
+        li{
+            color: green ;
+        }
+        /* class类选择器 权重10*/
+        /* .我们起的class名字 */
+        .colorBlue{
+            color: blue;
+        }
+        .colorred{
+            color: red;
+        }
+        /* id选择器 权重100 */
+        #li1{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- ul>li{文字内容}*10  前面都没有回车 *10后 再回车 -->
+    <ul>
+        <li class="colorBlue" id="li1">医院管理系统</li>
+        <li>医院管理系统</li>
+        <li class="colorred">医院管理系统</li>
+        <li>医院管理系统</li>
+        <li>医院管理系统</li>
+        <!-- 一个元素可以同时设置多个class名字  名字之间 使用空格隔开  class="名字1 名字2" -->
+        <li class="colorred colorBlue">医院管理系统111</li>
+        <li>医院管理系统</li>
+        <li>医院管理系统</li>
+        <li class="colorBlue">医院管理系统</li>
+        <li>医院管理系统</li>
+    </ul>
+</body>
+</html>

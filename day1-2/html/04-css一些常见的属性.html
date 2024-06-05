@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            color: red;
+            /* 十六进制 0 1 2 3 4 5 6 7 8 9 A B C D E F  */
+            /* #上方随机六位 */
+            /* red green blue 三原色    每个颜色可以用两位数十六进制表示    f表示最多0表示最少 */
+            /* ff 00 00 */
+            /* aabbcc---abc 只能是三位或者六位 */
+
+            color: #ff0000;
+            color: #ffffff;
+            color: #000000;
+            color: #ffff00;
+            color: #ab2222;
+            /* color: #fff333; */
+            /* 2.文字大小   只能设置偶数 */
+            /* font-size: 16px;浏览器默认文字大小是16像素 */
+            font-size:16px ;
+        }
+        /* 3.取消加粗 */
+            h1,b{
+                /* 群组选择器，代表选中了h1和b */
+                font-weight: normal;
+            }
+            i{
+                font-style: normal;
+            }
+            .li1{
+                /* 5.字体 */
+                font-family: '楷体';
+                
+            }
+            .li2{
+                font-family: '行楷','幼圆','黑体';
+            }
+    </style>
+</head>
+<body>
+    <h1>标题默认会加粗</h1>
+    <b>加粗</b>
+    <i>倾斜</i>
+    <ol>
+        <li class="li1">我们今天需要掌握css属性，实现我们学校官网的一些效果</li>
+        <li class="li2">我们今天需要掌握css属性，实现我们学校官网的一些效果</li>
+        <li>我们今天需要掌握css属性，实现我们学校官网的一些效果</li>
+        <li>我们今天需要掌握css属性，实现我们学校官网的一些效果</li>
+        <li>我们今天需要掌握css属性，实现我们学校官网的一些效果</li>
+        <li>我们今天需要掌握css属性，实现我们学校官网的一些效果</li>
+        <li>我们今天需要掌握css属性，实现我们学校官网的一些效果</li>
+        <li>我们今天需要掌握css属性，实现我们学校官网的一些效果</li>
+        <li>我们今天需要掌握css属性，实现我们学校官网的一些效果</li>
+        <li>我们今天需要掌握css属性，实现我们学校官网的一些效果</li>
+    </ol>
+</body>
+</html>
