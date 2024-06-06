@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transfrom变换</title>
+    <style>
+        /* 图片不一定大小合适，重置宽高 */
+        img {
+            height: 300px;
+            /* 设置过渡时间 */
+            transition: 1s;
+        }
+
+        img:hover {
+            /* 变换transform里，缩放scale(),旋转rotate(),拉伸skew()，位移translat() */
+            /* transform: scale(2); */
+            /* transform: scale(0.5); */
+            /* transform: scale(0); */
+            transform: scale(-1);
+            /* 变换transform: rotate(角度值); 旋转 有单位deg */
+            transform: rotate(3600deg);
+            /* transform: skew(角度值);拉伸 有单位deg */
+            transform: skew(-30deg);
+            /* 分为X Y 轴 */
+            transform: skewX(-30deg);
+            transform: skewY(30deg);
+            /* 位移transform: 位移translate();有单位px 或者百分比都可以 */
+            transform: translate(-500px);
+            transform: translateY(500px);
+            /* 如想要同时实现多个效果  那么就空格隔开 */
+            transform: scale(-1) skew(30deg) translate(-500px);
+        }
+    </style>
+</head>
+
+<body>
+    <img src="../images/2.jpg" alt="">
+</body>
+
+</html>
