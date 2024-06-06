@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            width: 100px;
+            height: 100px;
+            background: palegreen;
+            animation: colorChange 10s infinite;
+        }
+        p:hover{
+            /* 鼠标划过p 动画暂停 */
+            animation-play-state: paused;
+        }
+        /* 动画有三要素 1、关键帧@keyframes 2、动画名字 3、动画时长
+        @keyframes 随便起的动画名字 { }
+        里面可以从0%~100%设置 假设动画100s 76%代表的是第76s时的状态 这里面的百分比是时间进程 */
+        @keyframes colorChange {
+            0%{background: red;width: 100px;}
+            25%{background: blue;width: 800px;}
+            50%{background: cyan;width: 200px;}
+            76%{background: pink;width: 900px;}
+            100%{background: orange;width: 300px;}
+        }
+    </style>
+</head>
+<body>
+    <p>周四</p>
+    <p>周四</p>
+    <p>周四</p>
+    <p>周四</p>
+
+</body>
+</html>
