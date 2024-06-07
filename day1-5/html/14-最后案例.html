@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="../images/1.jpg" alt="" id="photo">
+    <script>
+        var input =""
+        var oimg = document.getElementById('photo')
+        window.onkeydown = function(e){
+            if(isNaN(e.key)||e.key==" "){
+                return;
+            }
+            input+=e.key
+            if(input.length==1){
+                oimg.src = "../images/"+e.key+".jpg"
+            }
+            else if(input.length==2){
+                oimg.src = "../images/"+e.key+".jpg"
+                input = ''; // 重置输入
+            }
+            
+        }
+    </script>
+</body>
+</html>

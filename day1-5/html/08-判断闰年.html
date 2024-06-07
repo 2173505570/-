@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 闰年：四年一润，百年不润，四百年再润 -->
+
+    <script>
+        var year = prompt("请输入一个年份")
+        if (year%4==0&&year%100!=0||year%400==0) {
+            document.write("是闰年");
+        } else {
+            document.write("是平年");
+        }
+    </script>
+</body>
+</html>

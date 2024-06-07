@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        //目的 让a b 两个值互换
+        function change1(a,b){
+            var c
+            c = a
+            a = b
+            b = c
+            console.log("方法一转换后"+a,b)
+        }
+        function change2(a,b){
+            a +=b
+            b = a-b
+            a -=b
+            console.log("方法二转换后"+a,b)
+        }
+        //声明两个变量
+        var a = 10
+        var b = 20
+        console.log("转换前"+a,b)
+        change1(a,b)
+        change2(a,b)
+        
+        
+
+    </script>
+</body>
+</html>

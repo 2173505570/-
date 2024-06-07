@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 去除页面标签自带的缝隙 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #big {
+            /* 设置宽度 */
+            width: 1200px;
+            /* 设置背景色 */
+            background: palegreen;
+            /* 有宽度的div 水平居中浏览器 */
+            margin: 0 auto;
+            /* 希望很多个dl 横向展示 */
+            /* 设置弹性盒 */
+            display: flex;
+            /* 项目比较多 超出的区域想要折行 */
+            flex-wrap: wrap;
+            /* 项目横向  两端环绕对齐 */
+            justify-content: space-around;
+        }
+
+        img {
+            /* 统一图片的大小 */
+            width: 310px;
+            height: 400px;
+        }
+
+        dl {
+            /* 设置宽度  边框  背景色  行高 */
+            width: 330px;
+            height: 450px;
+            line-height: 24px;
+            background: cyan;
+            /* 整体距离下方30 */
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="big">
+        
+    </div>
+    <script>
+    var str = ''
+    for(var i=1;i<=50;i++){
+        str = str+'<dl><img src="../images/'+i+'.jpg" alt=""><dt>迪丽热巴</dt><dd>新疆女演员</dd></dl>'
+    }
+    var oBig = document.getElementById('big')
+    oBig.innerHTML=str
+    </script>
+</body>
+
+</html>

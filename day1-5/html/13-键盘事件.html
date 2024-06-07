@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>键盘事件</title>
+</head>
+
+<body>
+    <audio src="../music/1.mp3" id="yingyue"></audio>
+    <script>
+        // js中最大的对象是window
+        // console.log(window);
+        // 绑定键盘事件
+        // 想要使用元素，得先获取元素 通过id值可以获取
+        var a =document.getElementById('yingyue')
+        window.onkeydown=function(e){
+            // console.log('键盘按下');
+            // console.log(e)
+            console.log(e.key);
+            // 希望按下按键，播放音乐
+            // js控制 需要两步 
+            a.src = '../music/'+e.key+'.mp3'
+            a.autoplay = true
+        }
+
+    </script>
+</body>
+</html>

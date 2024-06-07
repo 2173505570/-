@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英雄列表</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #header {
+            width: 100%;
+            /* 使用100%宽度更灵活 */
+            height: 140px;
+            background: burlywood;
+            display: flex;
+            justify-content: center;
+            /* 水平居中 */
+            align-items: center;
+            /* 垂直居中 */
+            gap: 100px;
+            /* 添加间距 */
+        }
+        #header img{
+            width: 140px;
+            height: 140px;
+            /* margin-left: 12px;
+            margin-top: 31px; */
+        }
+        #header a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 20px;
+            /* background: cyan; */
+            /* border-right: 2px solid #e7e7e7; */
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        #big {
+        /* 设置宽度 */
+        width: 100%;
+        /* 设置背景色 */
+        background: palegreen;
+        /* 有宽度的div 水平居中浏览器 */
+        margin: 0 auto;
+        /* 希望很多个dl 横向展示 */
+        /* 设置弹性盒 */
+        display: flex;
+        /* 项目比较多 超出的区域想要折行 */
+        flex-wrap: wrap;
+        /* 项目横向 两端环绕对齐 */
+        justify-content: space-around;
+        }
+
+        #big img {
+        /* 统一图片的大小 */
+        width: 310px;
+        height: 400px;
+        }
+
+        dl {
+        /* 设置宽度 边框 背景色 行高 */
+        width: 330px;
+        height: 450px;
+        line-height: 24px;
+        background: cyan;
+        /* 整体距离下方30 */
+        margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <a href="html/daye.html"><img src="images/wz8.jpg" alt=""></a>
+        <a href="html/sheshou.html">射手</a>
+        <a href="html/fuzhu.html">辅助</a>
+        <a href="html/daye.html">打野</a>
+        <a href="html/zhanshi.html">战士</a>
+        <a href="html/fashi.html">法师</a>
+        <a href="html/tanke.html">坦克</a>
+        
+    </div>
+    <div id="big">
+
+    </div>
+    <script>
+        var names = ['王振', '张佳乐', '穆瑞杰', '秦永佳', '陈英俊','肖烊','胡子言','王佰万']; // 假设有5个不同的名字
+        var descriptions = ['新疆女演员', '新疆女演员', '新疆女演员', '新疆女演员', '新疆女演员']; // 对应的描述
+
+        var str = '';
+        for (var i = 1; i <= 50; i++) { // 使用模运算符 % 来循环引用数组中的元素 var name=names[(i - 1) % names.length]; var
+            description=descriptions[(i - 1) % descriptions.length]; str +='<dl><img src="../images/' + i
+            + '.jpg" alt=""><dt>' + name + '</dt><dd>' + description + '</dd></dl>' ; }
+
+        var oBig = document.getElementById('big')
+        oBig.innerHTML = str
+    </script>
+</body>
+
+</html>
