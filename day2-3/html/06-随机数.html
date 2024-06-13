@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(Math.random())
+        function rgb(){
+            var r = parseInt(Math.random()*256)
+            var g = parseInt(Math.random()*256)
+            var b = parseInt(Math.random()*256)
+            return 'rgb('+r+','+g+','+b+')'
+        }
+        // document.write(r,g,b)
+        var ohtml = document.querySelector('html')
+        setInterval(function(){
+            ohtml.style.background=rgb()
+        },100)
+        
+    </script>
+</body>
+</html>

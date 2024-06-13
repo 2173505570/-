@@ -9,97 +9,128 @@
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         #header {
             width: 100%;
-            /* 使用100%宽度更灵活 */
-            height: 140px;
-            background: burlywood;
+            height: auto;
+            background: rgb(197, 143, 234);
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            /* 水平居中 */
             align-items: center;
-            /* 垂直居中 */
-            gap: 100px;
-            /* 添加间距 */
+            padding: 10px 0;
+            gap: 10px;
         }
-        #header img{
-            width: 140px;
-            height: 140px;
-            /* margin-left: 12px;
-            margin-top: 31px; */
+
+        #header img {
+            width: 100px;
+            height: 100px;
         }
+
         #header a {
             text-decoration: none;
             color: #fff;
-            font-size: 20px;
-            /* background: cyan; */
-            /* border-right: 2px solid #e7e7e7; */
-            padding-left: 0px;
-            padding-right: 0px;
-            padding-top: 5px;
-            padding-bottom: 5px;
+            font-size: 16px;
+            padding: 5px 10px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
         }
+
         #big {
-        /* 设置宽度 */
-        width: 100%;
-        /* 设置背景色 */
-        background: palegreen;
-        /* 有宽度的div 水平居中浏览器 */
-        margin: 0 auto;
-        /* 希望很多个dl 横向展示 */
-        /* 设置弹性盒 */
-        display: flex;
-        /* 项目比较多 超出的区域想要折行 */
-        flex-wrap: wrap;
-        /* 项目横向 两端环绕对齐 */
-        justify-content: space-around;
+            width: 100%;
+            background: palegreen;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 10px;
+            overflow: auto;
         }
 
         #big img {
-        /* 统一图片的大小 */
-        width: 310px;
-        height: 400px;
+            width: 100%;
+            height: 400px;
         }
 
         dl {
-        /* 设置宽度 边框 背景色 行高 */
-        width: 330px;
-        height: 450px;
-        line-height: 24px;
-        background: cyan;
-        /* 整体距离下方30 */
-        margin-bottom: 30px;
+            width: 100%;
+            max-width: 330px;
+            margin: 10px;
+            line-height: 24px;
+        }
+
+        #big dt {
+            font-weight: normal;
+            font-size: 25px;
+        }
+
+        #big dd {
+            color: rgb(237, 181, 120);
+        }
+
+        @media (min-width: 600px) {
+            dl {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media (min-width: 900px) {
+            dl {
+                width: calc(33.33% - 20px);
+            }
+        }
+
+        @media (min-width: 1200px) {
+            dl {
+                width: calc(25% - 20px);
+            }
         }
     </style>
 </head>
 
 <body>
-    <div id="header">
-        <a href="html/daye.html"><img src="images/wz8.jpg" alt=""></a>
-        <a href="html/sheshou.html">射手</a>
-        <a href="html/fuzhu.html">辅助</a>
-        <a href="html/daye.html">打野</a>
-        <a href="html/zhanshi.html">战士</a>
-        <a href="html/fashi.html">法师</a>
-        <a href="html/tanke.html">坦克</a>
-        
+    <div id="content">
+        <div id="header">
+            <a href="index.html"><img src="images/wz8.jpg" alt=""></a>
+            <a href="html/sheshou.html">射手</a>
+            <a href="html/fuzhu.html">辅助</a>
+            <a href="html/daye.html">打野</a>
+            <a href="html/zhanshi.html">战士</a>
+            <a href="html/fashi.html">法师</a>
+        </div>
+        <div id="big">
+        </div>
     </div>
-    <div id="big">
 
-    </div>
     <script>
-        var names = ['王振', '张佳乐', '穆瑞杰', '秦永佳', '陈英俊','肖烊','胡子言','王佰万']; // 假设有5个不同的名字
-        var descriptions = ['新疆女演员', '新疆女演员', '新疆女演员', '新疆女演员', '新疆女演员']; // 对应的描述
+        var names = ['王振', '张佳乐', '穆瑞杰', '秦永佳', '陈英俊', '肖烊', '胡子言', '王佰万', '田旭东', '赵嘉伟']; // 假设有10个不同的名字
+        var descriptions = ['富士山下的五六', '国服第一射手', '玫瑰哥', '欢乐喜剧人', '真正的iKun', '长中医最后的深情', '', '刀哥', '神医', '']; // 对应的描述
 
         var str = '';
-        for (var i = 1; i <= 50; i++) { // 使用模运算符 % 来循环引用数组中的元素 var name=names[(i - 1) % names.length]; var
-            description=descriptions[(i - 1) % descriptions.length]; str +='<dl><img src="../images/' + i
-            + '.jpg" alt=""><dt>' + name + '</dt><dd>' + description + '</dd></dl>' ; }
+        for (var i = 1; i <= 10; i++) { // 使用模运算符 % 来循环引用数组中的元素
+            var name = names[(i - 1) % names.length];
+            var description = descriptions[(i - 1) % descriptions.length];
+            str += '<dl><img src="images/' + i + '.jpg" alt=""><dt>' + name + '</dt><dd>' + description + '</dd></dl>';
+        }
 
         var oBig = document.getElementById('big')
         oBig.innerHTML = str
+
+        var password;
+        var passwordCorrect = false;
+
+        while (!passwordCorrect) {
+            password = prompt("班长的寝室号是：");
+
+            if (password === "540") {
+                alert("密码正确！");
+                passwordCorrect = true;
+            } else {
+                alert("密码错误！");
+            }
+        }
     </script>
 </body>
 

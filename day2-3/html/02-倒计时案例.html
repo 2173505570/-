@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <script>
+        var i =20
+        var oH1  =document.querySelector('h1')
+        var timer = setInterval(function(){
+            if(i<0){
+                clearInterval(timer)
+            }else if(i==0){
+                oH1.innerHTML='时间到'
+            }
+            else{
+                oH1.innerHTML='倒计时'+i
+                i--
+            }
+        },1000)
+    </script>
+</body>
+</html>

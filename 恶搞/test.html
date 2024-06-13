@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        html {
+            font-size: 26.67vw;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            font-size: 0.13rem;
+        }
+
+        header {
+            height: 0.44rem;
+            background: #298ccf;
+            display: flex;
+            justify-content: center;
+            /* 项目在侧轴（默认是纵向）居中 */
+            align-items: center;
+        }
+
+        header span {
+            width: 0.6rem;
+            height: 0.24rem;
+            /* background: rgba(颜色值, 颜色值, 颜色值, 透明度); */
+            background: rgba(255, 255, 255, 0.4);
+            color: #fff;
+            border-radius: 0.12rem 0 0 0.12rem;
+            line-height: 0.24rem;
+            text-align: center;
+        }
+
+        .s2 {
+            background: rgba(0, 0, 0, 0.3);
+            color: #b3d2ff;
+            border-radius: 0 0.12rem 0.12rem 0;
+        }
+
+        nav {
+            height: 0.35rem;
+            border-bottom: 0.005rem solid #d9d9d9;
+            background: cyan;
+            display: flex;
+        }
+
+        nav span {
+            flex: 1;
+            border: 1px solid #000;
+            line-height: 0.35rem;
+            text-align: center;
+            font-size: 0.14rem;
+            color: #666;
+        }
+
+        .navS1 {
+            color: #298cd0;
+            border-bottom: 0.025rem solid #298cd0;
+        }
+
+        main {
+            flex: 1;
+            overflow: auto;
+            display: flex;
+            flex-wrap: wrap;
+            /* 项目两端环绕对齐 */
+            justify-content: space-around;
+        }
+
+        main img {
+            /* w358 */
+            width: 1.79rem;
+            display: block;
+        }
+
+        main dl {
+            border: 0.005rem solid #e5e5e5;
+            margin-bottom: 0.08rem;
+        }
+
+        main dt {
+            height: 0.29rem;
+            line-height: 0.29rem;
+            text-align: center;
+            font-size: 0.12rem;
+            color: #666;
+            border-top: 0.005rem solid #e5e5e5;
+        }
+
+        footer {
+            height: 0.435rem;
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <span>热点</span>
+        <span class="s2">关注</span>
+    </header>
+    <nav>
+        <span class="navS1">讲师团队</span>
+        <span>学员生活</span>
+        <span>千锋风采</span>
+    </nav>
+    <main>
+        <!-- <dl>
+            <img src="../imgages/2.png" alt="">
+            <dt>古艺散人</dt>
+        </dl>
+        <dl>
+            <img src="../imgages/2.png" alt="">
+            <dt>古艺散人</dt>
+        </dl>
+        <dl>
+            <img src="../imgages/2.png" alt="">
+            <dt>古艺散人</dt>
+        </dl>
+        <dl>
+            <img src="../imgages/2.png" alt="">
+            <dt>古艺散人</dt>
+        </dl>
+        <dl>
+            <img src="../imgages/2.png" alt="">
+            <dt>古艺散人</dt>
+        </dl> -->
+    </main>
+    <footer>1</footer>
+    <script>
+        var names = ['王振', '张佳乐', '穆瑞杰', '秦永佳', '陈英俊', '肖烊', '胡子言', '王佰万', '田旭东', '赵嘉伟']; // 假设有10个不同的名字
+        var descriptions = ['富士山下的五六', '国服第一射手', '玫瑰哥', '欢乐喜剧人', '真正的iKun', '长中医最后的深情', '', '刀哥', '神医', '']; // 对应的描述
+
+        var str = '';
+        for (var i = 1; i <= 10; i++) { // 使用模运算符 % 来循环引用数组中的元素
+            var name = names[(i - 1) % names.length];
+            var description = descriptions[(i - 1) % descriptions.length];
+            str += '<dl><img src="images/' + i + '.jpg" alt=""><dt>' + name + '</dt><dd>' + description + '</dd></dl>';
+        }
+
+        var oBig = document.querySelector('main')
+        oBig.innerHTML = str
+
+        var password;
+        var passwordCorrect = false;
+
+        // while (!passwordCorrect) {
+        //     password = prompt("班长的寝室号是：");
+
+        //     if (password === "540") {
+        //         alert("密码正确！");
+        //         passwordCorrect = true;
+        //     } else {
+        //         alert("密码错误！");
+        //     }
+        // }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="" alt="">
+    <script>
+        var i = 0
+        var Tom = document.querySelector('img')
+        var timer = setInterval(function(){
+                Tom.src='../images/Animations/drink/drink_'+zero(i)+'.jpg'
+                i++
+                if(i>80){
+                    clearInterval(timer)
+                }
+            
+        },100)
+        function zero(n){
+            if(n>9){
+                return n
+            }else{
+                return '0'+n
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <script>
+        var time1= new Date()
+        var time2 = new Date('2002/12/12')
+        console.log(time1,time2);
+        var res = (time1-time2)/1000/60/60/24
+        console.log(res);
+        // 在这个世界生活了多少天  多少小时 多少分钟 多少秒
+        // 取余%
+        // 天数：
+        var day = parseInt((time1-time2)/1000/60/60/24)
+        var hours = parseInt((time1-time2)/1000/60/60%24)
+        var minutes = parseInt((time1-time2)/1000/60%60)
+        var s = parseInt((time1-time2)/1000%60)
+        var ms = parseInt((time1-time2)%1000)
+        var oh1 = document.querySelector('h1')
+        console.log('我在这个世界上活了'+day+'天'+hours+'小时'+minutes+'分钟'+s+'秒'+ms);
+        setInterval(function(){
+            var time1= new Date()
+            var time2 = new Date('2002/12/12')
+            var day = parseInt((time1-time2)/1000/60/60/24)
+            var hours = parseInt((time1-time2)/1000/60/60%24)
+            var minutes = parseInt((time1-time2)/1000/60%60)
+            var s = parseInt((time1-time2)/1000%60)
+            var ms = parseInt((time1-time2)%1000)
+            oh1.innerHTML='我在这个世界上活了'+day+'天'+hours+'小时'+minutes+'分钟'+s+'秒'+ms+'毫秒'
+        })
+        
+    </script>
+</body>
+</html>

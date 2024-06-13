@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            background: cyan;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        function rgb(){
+        var r = parseInt(Math.random()*256)
+        var g = parseInt(Math.random()*256)
+        var b = parseInt(Math.random()*256)
+        return 'rgb('+r+','+g+','+b+')'
+        }
+        var oBox = document.querySelector('#box')
+        var ohtml = document.querySelector('html')
+        oBox.onclick = function(){
+            // alert('你敢动我试试')
+            oBox.style.background = rgb()
+            ohtml.style.background=rgb()
+        }
+    </script>
+</body>
+</html>

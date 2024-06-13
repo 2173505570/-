@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+        }
+        html{
+            font-size: 26.67vw;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            font-size: 0.13rem;
+        }
+        header{
+            height: 0.44rem;
+            background: #298ccf;
+            display: flex;
+            justify-content: center;
+            /* 项目在侧轴（默认是纵向）居中 */
+            align-items: center;
+        }
+        header span{
+            width: 0.6rem;
+            height: 0.24rem;
+            /* background: rgba(颜色值, 颜色值, 颜色值, 透明度); */
+            background: rgba(255, 255, 255, 0.4);
+            color: #fff;
+            border-radius: 0.12rem 0 0 0.12rem;
+            line-height: 0.24rem;
+            text-align: center;
+        }
+        .s2{
+            background: rgba(0, 0, 0, 0.3);
+            color: #b3d2ff;
+            border-radius: 0 0.12rem 0.12rem 0;
+        }
+        nav{
+            height: 0.35rem;
+            border-bottom: 0.005rem solid #d9d9d9;
+            background: cyan;
+            display: flex;
+        }
+        nav span{
+            flex: 1;
+            /* border: 1px solid #000; */
+            line-height: 0.35rem;
+            text-align: center;
+            font-size: 0.14rem;
+            color: #666;
+        }
+        .navS1{
+            color: #298cd0;
+            border-bottom: 0.025rem solid #298cd0;
+        }
+        main{
+            flex: 1;
+            overflow: auto;
+            display: flex;
+            flex-wrap: wrap;
+            /* 项目两端环绕对齐 */
+            justify-content: space-around;
+        }
+        main img{
+            /* w358 */
+            width: 1.79rem;
+            display: block;
+        }
+        main dl{
+            border: 0.005rem solid #e5e5e5;
+            margin-bottom: 0.08rem;
+        }
+        main dt{
+            height: 0.29rem;
+            line-height: 0.29rem;
+            text-align: center;
+            font-size: 0.12rem;
+            color: #666;
+            border-top: 0.005rem solid #e5e5e5;
+        }
+        footer{
+            height: 0.435rem;
+            /* background: red; */
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            font-size: 0.12rem;
+            color: #9a9a9a;
+            text-align: center;
+        }
+        .iconfont{
+            font-size: 0.17rem;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <span>热点</span>
+        <span class="s2">关注</span>
+    </header>
+    <nav>
+        <span class="navS1">讲师团队</span>
+        <span>学员生活</span>
+        <span>千锋风采</span>
+    </nav>
+    <main>
+        
+    </main>
+    <footer>
+        <span>
+            <i class="iconfont icon-shouye"></i>首页
+        </span>
+        <span>
+            <i class="iconfont icon-sousuo1"></i>发现
+        </span>
+        <!-- <span>
+            <i class="iconfont icon-user"></i>我的
+        </span> -->
+        <span>
+            <i class="iconfont icon-user"></i>我的
+        </span>
+        <span>
+            <i class="iconfont icon-xitongcaidan"></i>退出
+        </span>
+    </footer>
+    <script>
+        var oMain = document.querySelector('main')
+        var str = ""
+        for(var i=0;i<50;i++)
+        {
+            str+='<dl><img src="../imgages/2.png" alt=""><dt>古艺散人</dt></dl>'
+        }
+        oMain.innerHTML=str
+    </script>
+</body>
+</html>

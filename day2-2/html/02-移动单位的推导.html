@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 已知测量的是750px宽度 高度是88px
+    已知是以iphone6/7/8为基准做的设计图 因为宽度是750 750/2=375
+    iphone6/7/8的宽度是375
+    移动端 不让使用px 建议使用rem
+    rem这个单位 默认情况下 1rem=16px
+
+    我们设计图 测量的大小 需要除以2 再使用 为什么
+    因为我们设计图是两倍图 所以用的时候需要除以2 （dpr 设计图大小和设备大小之比）
+    有的是三倍 那就需要除以3
+    我们怎么知道呢 到时候UI小姐姐会告诉我们
+    750 数字要敏感一点 就是375的2倍
+
+
+    第一部分 我们测量高度是88px 所以使用的时候 需要使用88/2=44px
+    44px需要转变为rem
+
+    默认1rem = 16px
+    所以 44px = 44/16rem 这个数好难
+    不好算
+
+    如果1rem=1px 或者1rem=100px 就好了 那就嘎嘎好算
+
+    能做到吗？？？？？？rem的大小和什么有关 和html根节点的font-size有关
+    所以
+    html{font-size:1px} 此时1rem=1px 但是这个换算太小了 我们大多数人希望1rem=100px
+    html{font-size:100px} 此时1rem=100px
+    头部header区域高度88px 除以2变成44px 换算为rem 0.44rem 真好
+    但是 有个问题
+    我们将单位转换为rem的目的是希望 可以随着设备的变化而进行等比例变化
+    px是一个固定单位 他不会随着设备的变化而变化 所以咱不用
+    但是！！！！
+    你为了让1rem=100px 进行设计图测量大小的单位转变
+    你在html{font-size:100px}
+    注意啊 这里 用的竟然是px 这也太双标了 一边说着不用 一边一开始就用上了？？？？
+    那不行
+    思考！！什么单位会随着设备大小的变化而进行变化？？？？？？ vw vh
+    咱们建议使用vw 1vw是当前设备宽度百分之一的大小
+    此时已知咱们设计图是750px的 也就是得知是以375px的设备为基准做的设计图
+    所以 请注意
+    在这里 1vw = 3.75px
+    100vw = 375px
+
+    求 100px = 26.67vw
+    因而 我们 html{font-size:26.67vw} 此时1rem依旧代表100px -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            font-size: 26.67vw;
+        }
+        header {
+            height: 0.44rem;
+            background: palegreen;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+    </header>
+</body>
+
+</html>
